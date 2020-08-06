@@ -109,7 +109,7 @@ public class LoanService {
     public static void main(String[] args) throws Exception{
         ApplicationContext context = new ClassPathXmlApplicationContext("spring-beans.xml");
         LoanService loanService = (LoanService) context.getBean("loanService");
-
+        System.out.println("Testing New Git Repository");
 
         /*LoanService loanService = new LoanService();
         HibernateLoanDao hibernateLoanDao = new HibernateLoanDao();
