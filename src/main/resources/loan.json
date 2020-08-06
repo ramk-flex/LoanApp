@@ -1,0 +1,140 @@
+{
+  "mortgageType": "conv",
+  "fhaCaseNumber": null,
+  "loanAmount": 250000,
+  "loanTerm": 360,
+  "productType": "fix",
+  "properties": [
+    {
+      "occupancyType": "Primary Residence",
+      "numberOfUnits": 1,
+      "yearBuilt": "2013",
+      "numberOfFloors": 2,
+      "numberOfUnits": 1,
+      "squareFootAge": 3350,
+      "familyUnits": 1,
+      "lotSize": 6789,
+      "purchasePriceAmount": 850000,
+      "newConstructionYn": true,
+      "propertyAddress": {
+        "addressLineOne": "1 Test Drive",
+        "addressLineTwo": "2 street",
+        "city": "Eastwood Cliffs",
+        "stateId": "NJ",
+        "postalCodeId": "07632",
+        "countyId": "Collin"
+      }
+    }
+  ],
+
+  "borrowers": [
+    {
+      "borrowerNumber": 1,
+      "firstName": "John",
+      "middleName": "Andrew",
+      "lastName": "Doe",
+      "socialSecurityNumber": "991919991",
+      "homePhoneNumber": "123654785",
+      "dateOfBirth": "1972-06-06",
+      "yearsInSchool": 18,
+      "maritalStatus": "Single",
+      "numberOfDependents": 2,
+      "borrowerRoleId": "PRIMARY",
+      "addresses": [
+        {
+          "addressType": "PRIMARY",
+          "noOfYearsStayed": 2,
+          "noOfMonthsStayed": 2,
+          "address": {
+            "addressLineOne": "1 Borrower Primary Drive",
+            "addressLineTwo": "2 street",
+            "city": "Eastwood Cliffs",
+            "stateId": "NJ",
+            "postalCodeId": "07632",
+            "countyId": "Collin"
+          }
+        },
+        {
+          "addressType": "FORMER",
+          "noOfYearsStayed": 2,
+          "noOfMonthsStayed": 2,
+          "address": {
+            "addressLineOne": "1 Borrower Former Drive",
+            "addressLineTwo": "2 street",
+            "city": "Eastwood Cliffs",
+            "stateId": "NJ",
+            "postalCodeId": "07632",
+            "countyId": "Collin"
+          }
+        },
+        {
+          "addressType": "MAILING",
+          "noOfYearsStayed": 2,
+          "noOfMonthsStayed": 2,
+          "address": {
+            "addressLineOne": "1 Borrower Mailing Drive",
+            "addressLineTwo": "2 street",
+            "city": "Eastwood Cliffs",
+            "stateId": "NJ",
+            "postalCodeId": "07632",
+            "countyId": "Collin"
+          }
+        }
+      ]
+    },
+    {
+      "borrowerNumber": 2,
+      "firstName": "Jim",
+      "middleName": "Andrew",
+      "lastName": "Doe",
+      "socialSecurityNumber": "991919991",
+      "homePhoneNumber": "123654785",
+      "dateOfBirth": "1972-06-06",
+      "yearsInSchool": 18,
+      "maritalStatus": "Single",
+      "numberOfDependents": 2,
+      "borrowerRoleId": "COBORROWER",
+      "addresses": [
+        {
+          "addressType": "PRIMARY",
+          "noOfYearsStayed": 2,
+          "noOfMonthsStayed": 2,
+          "address": {
+            "addressLineOne": "2 Borrower Primary Drive",
+            "addressLineTwo": "2 street",
+            "city": "Eastwood Cliffs",
+            "stateId": "NJ",
+            "postalCodeId": "07632",
+            "countyId": "Collin"
+          }
+        },
+        {
+          "addressType": "FORMER",
+          "noOfYearsStayed": 2,
+          "noOfMonthsStayed": 2,
+          "address": {
+            "addressLineOne": "2 Borrower Former Drive",
+            "addressLineTwo": "2 street",
+            "city": "Eastwood Cliffs",
+            "stateId": "NJ",
+            "postalCodeId": "07632",
+            "countyId": "Collin"
+          }
+        },
+        {
+          "addressType": "MAILING",
+          "noOfYearsStayed": 2,
+          "noOfMonthsStayed": 2,
+          "address": {
+            "addressLineOne": "2 Borrower Mailing Drive",
+            "addressLineTwo": "2 street",
+            "city": "Eastwood Cliffs",
+            "stateId": "NJ",
+            "postalCodeId": "07632",
+            "countyId": "Collin"
+          }
+        }
+      ]
+    }
+  ]
+}

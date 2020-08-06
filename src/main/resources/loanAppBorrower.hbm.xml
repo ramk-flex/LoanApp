@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.loanapp.vo">
+
+    <class name="BorrowerVO" table="loan_app_borrower">
+        <id name="id" column="id">
+            <generator class="increment"/>
+        </id>
+        <version  name="version"                column="version"                type="java.lang.Long"/>
+        <property name="loanAppLoanId"          column="loan_app_loan_id"       type="java.lang.Long"/>
+        <property name="createdDateTime"        column="created_date_time"      type="java.time.Instant"/>
+        <property name="createdByUserId"        column="created_by_user_id"     type="string"/>
+        <property name="modifiedDateTime"       column="modified_date_time"     type="java.time.Instant"/>
+        <property name="modifiedByUserId"       column="modified_by_user_id"    type="string"/>
+        <property name="borrowerNumber"         column="borrower_number"        type="java.lang.Short"/>
+        <property name="borrowerRoleId"         column="borrower_role_id"       type="java.lang.String"/>
+        <property name="firstName"              column="first_name"             type="string"/>
+        <property name="middleName"             column="middle_name"            type="string"/>
+        <property name="lastName"               column="last_name"              type="string"/>
+        <property name="socialSecurityNumber"   column="social_security_number" type="string"/>
+        <property name="homePhoneNumber"        column="home_phone_number"      type="string"/>
+        <property name="dateOfBirth"            column="date_of_birth"          type="java.sql.Date"/>
+        <property name="yearsInSchool"          column="years_at_school"        type="java.lang.Short"/>
+        <property name="maritalStatus"          column="marital_status"         type="string"/>
+        <property name="numberOfDependents"     column="number_of_dependents"   type="java.lang.Short"/>
+
+        <set name="addresses" lazy ="false" cascade="all-delete-orphan">
+            <key column="loan_app_borrower_id"/>
+            <one-to-many class="BorrowerAddressVO"/>
+        </set>
+    </class>
+
+</hibernate-mapping>

@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.loanapp.vo">
+
+    <class name="BorrowerAddressVO" table="loan_app_borrower_address">
+        <id name="id" column="id">
+            <generator class="increment"/>
+        </id>
+        <version  name="version"                column="version"                type="java.lang.Long"/>
+        <property name="createdDateTime"        column="created_date_time"      type="java.time.Instant"/>
+        <property name="createdByUserId"        column="created_by_user_id"     type="string"/>
+        <property name="modifiedDateTime"       column="modified_date_time"     type="java.time.Instant"/>
+        <property name="modifiedByUserId"       column="modified_by_user_id"    type="string"/>
+        <property name="loanAppBorrowerId"      column="loan_app_borrower_id"   type="java.lang.Long"/>
+        <property name="addressType"            column="address_type"            type="string"/>
+        <property name="noOfYearsStayed"        column="no_of_years_stayed"     type="java.lang.Short"/>
+        <property name="noOfMonthsStayed"       column="no_of_months_stayed"    type="java.lang.Short"/>
+
+        <many-to-one name="address"
+                     class="AddressVO"
+                     unique="true"
+                     lazy="false"
+                     cascade="all-delete-orphan"
+                     column="loan_app_address_id"/>
+    </class>
+</hibernate-mapping>

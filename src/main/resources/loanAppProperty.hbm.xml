@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.loanapp.vo">
+
+    <class name="PropertyVO" table="loan_app_property">
+        <id name="id" column="id">
+            <generator class="increment"/>
+        </id>
+
+        <version  name="version"                column="version"                type="java.lang.Long"/>
+        <property name="createdDateTime"        column="created_date_time"      type="java.time.Instant"/>
+        <property name="createdByUserId"        column="created_by_user_id"     type="string"/>
+        <property name="modifiedDateTime"       column="modified_date_time"     type="java.time.Instant"/>
+        <property name="modifiedByUserId"       column="modified_by_user_id"    type="string"/>
+
+        <property name="loanAppLoanId"          column="loan_app_loan_id"       type="java.lang.Long" insert="false" update="false"/>
+        <property name="occupancyType"          column="occupancy_type_id"      type="string"/>
+        <property name="numberOfUnits"          column="number_of_units"        type="java.lang.Short"/>
+        <property name="numberOfFloors"         column="number_of_floors"       type="java.lang.Short"/>
+        <property name="squareFootAge"          column="square_foot_age"        type="java.lang.Short"/>
+        <property name="familyUnits"            column="family_units"           type="java.lang.Short"/>
+        <property name="monthBuilt"             column="month_built"            type="java.lang.Short"/>
+        <property name="yearBuilt"              column="year_built"             type="java.lang.Short"/>
+        <property name="lotSize"                column="lot_size"               type="java.lang.Short"/>
+        <property name="purchasePriceAmount"    column="purchase_price_amount"  type="java.math.BigDecimal"/>
+        <property name="newConstructionYn"      column="new_construction_yn"    type="java.lang.Boolean"/>
+
+        <many-to-one name="propertyAddress"
+                    class="AddressVO"
+                    lazy="false"
+                    unique="true"
+                    cascade="all-delete-orphan"
+                    column="property_address_id"/>
+    </class>
+
+</hibernate-mapping>
